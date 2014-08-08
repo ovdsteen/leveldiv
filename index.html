@@ -5,42 +5,86 @@
 <title>levelDiv</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-
 <script src="jquery.leveldiv.js"></script>
 <script src="main.js"></script>
 
 <style type="text/css">
+
+    .container{
+      margin-top: 40px;
+    }
     .block{
         border: 1px solid #eee;
         position: relative;
     }
-    .block .btn{
-        position: absolute;
-        bottom: 10px;
+    .btn-group{
+      padding-top: 15px;
     }
+
+    .btn-group.pos-absolute{
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      left: 0px;
+      padding-top:15px; /* jQuery uses top to calculate*/
+      padding-right:15px;
+      padding-left:15px;
+    }
+
+  /* LESS
+  .block{
+    border: 1px solid #eee;
+    position: relative;
+    .btn-group{
+      padding-top: ceil(@grid-gutter-width/2);
+      &.pos-absolute{
+        position: absolute;
+        bottom: ceil(@grid-gutter-width/2);
+        width: 100%;
+        left: 0px;
+        padding-top:ceil(@grid-gutter-width/2); // jQuery uses top to calculate
+        padding-right:ceil(@grid-gutter-width/2);
+        padding-left:ceil(@grid-gutter-width/2);
+      }
+    }
+  }
+  */
 </style>
 
 </head>
 
 <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4 block">
+      <div class="row-equal">
+        <div class="col-md-4 col-sm-4 col-equal">
           <h2>Heading</h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+            <div class="btn-group">
+              <div class="text-center">
+                <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+                <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+              </div>
+            </div>
+
         </div>
-        <div class="col-md-4 block">
+        <div class="col-md-4 col-sm-4 col-equal">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum.</p>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.</p>
             <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+         <div class="btn-group text-center">
+            <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+              <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+          </div>
        </div>
-        <div class="col-md-4 block">
+        <div class="col-md-4 col-sm-4 col-equal">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <div class="btn-group">
+            <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+              <a class="btn btn-default" href="#" role="button">View details &raquo;</a>
+          </div>
         </div>
       </div>
 
