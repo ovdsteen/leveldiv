@@ -1,6 +1,7 @@
 var express = require('express'),
 	app = express(),
-	swig = require('swig');
+	swig = require('swig'),
+	port = 5000;
 
 app.engine('html', swig.renderFile)
 	.set('view engine', 'html')
@@ -14,7 +15,7 @@ app.get('/', function (req, res) {
 	res.render('index', { });
 });
 
-var server = app.listen(4000, function () {
-	console.log('app listening at port', 4000 );
+var server = app.listen(port, function () {
+	console.log('app listening at port', port );
 });
 
