@@ -39,33 +39,23 @@ var level = function(){
 		}
 	}
 }
+
 var leveldiv = function(opt){
 
-	if (opt.debounce) options.debounce = opt.debounce;
-	if (opt.responsive) options.responsive = opt.responsive;
-	if (opt.debug) options.debug = opt.debug;
-	if (opt.row) options.row = opt.row;
-	if (opt.column) options.column = opt.column;
+	for (var prop in opt) {
+		console.log(prop);
+		options[prop] = opt[prop];
+	};
 
-	if(window.attachEvent) { //ie 9+10
-		window.attachEvent('onload', level);
-	} else {
-		if(window.onload) {
-			var curronload = window.onload;
-			var newonload = function() {
-				curronload();
-				level();
-			};
-			window.onload = newonload;
-		} else {
-			window.onload = level();
+	document.onreadystatechange = function () {
+		if (document.readyState === "complete") {
+			level();
+			if (options.debounce){
+				window.onresize = debounce(level, options.debounce);
+			} else {
+				window.addEventListener("resize", level , true);
+			}
 		}
-	}
-
-	if (options.debounce){
-		window.onresize = debounce(leveldiv, options.debounce);
-	} else {
-		window.addEventListener("resize", leveldiv , true);
 	}
 
 }
