@@ -1,5 +1,4 @@
-Leveldiv
-========
+# Leveldiv
 Leveldiv is a small library to make HTML columns have the same height.
 
 
@@ -53,7 +52,7 @@ By default leveldiv uses the data attribute "level-row" but you can also use a c
 By default leveldiv uses the data attribute "level-column" but you can also use a classname
 
 #### Install the example
-```bash```
+```bash
 $ git clone git@github.com:ovdsteen/leveldiv.git
 $ cd example
 $ npm install
