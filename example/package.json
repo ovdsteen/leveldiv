@@ -1,0 +1,27 @@
+{
+  "name": "leveldiv-example",
+  "version": "0.1.0",
+  "description": "Example implementation leveldiv.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovdsteen/leveldiv.git"
+  },
+  "author": "Onno van der Steen <ovdsteen@gmail.com>",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "serve-static": "^1.7.1",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-browserify": "3.0",
+    "grunt-concurrent": "0.4",
+    "grunt-contrib-watch": "0.5",
+    "grunt-contrib-symlink": "0.3",
+    "grunt-mkdir": "0.1",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-sass": "0.14",
+    "matchdep": "0.3"
+  }
+}

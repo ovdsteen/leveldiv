@@ -1,0 +1,13 @@
+{
+  "name": "leveldiv",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ovdsteen/leveldiv.git"
+  },
+  "author": "Onno van der Steen <ovdsteen@gmail.com>",
+  "dependencies": {
+    "debounce": "^1.0.0"
+  }
+}
