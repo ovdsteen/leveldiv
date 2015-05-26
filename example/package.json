@@ -1,7 +1,7 @@
 {
   "name": "leveldiv-example",
-  "version": "0.1.0",
-  "description": "Example implementation leveldiv.js",
+  "version": "1.0.0",
+  "description": "Example implementation leveldiv",
   "repository": {
     "type": "git",
     "url": "https://github.com/ovdsteen/leveldiv.git"
