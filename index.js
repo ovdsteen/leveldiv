@@ -43,7 +43,6 @@ var level = function(){
 var leveldiv = function(opt){
 
 	for (var prop in opt) {
-		console.log(prop);
 		options[prop] = opt[prop];
 	};
 
