@@ -10,7 +10,7 @@ $ npm install leveldiv --save
 ```js
 var leveldiv = require('leveldiv');
 
-leveldiv( {
+leveldiv.set( {
 	debounce: 300,
 	responsive: 500,
 	debug: true,
@@ -33,6 +33,11 @@ Example HTML
 		<p>Lorem ipsum</p>
 	</article>
 </section>
+```
+
+#### Methods
+```js
+leveldiv.refresh();
 ```
 
 #### Options
