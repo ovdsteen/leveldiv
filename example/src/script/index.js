@@ -1,4 +1,5 @@
-var leveldiv = require('leveldiv');
+var leveldiv = require('leveldiv'),
+	request = require('superagent');
 
 leveldiv.set( {
 	debounce: 300,
@@ -20,5 +21,23 @@ document.getElementById("refresh").addEventListener("click", function( event ) {
 	setTimeout(function(){
 		leveldiv.refresh();
 	}, 500);
+
+}, false);
+
+document.getElementById("row").addEventListener("click", function( event ) {
+
+	event.preventDefault();
+
+	request
+		.get('/row')
+		.end(function(err, res){
+			if (!err){
+				var main = document.querySelector('main');
+				main.innerHTML = res.text+' '+main.innerHTML;
+				setTimeout(function(){
+					leveldiv.refresh();
+				}, 1000);
+			}
+		});
 
 }, false);

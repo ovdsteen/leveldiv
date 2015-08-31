@@ -7,33 +7,13 @@
 </head>
 <body>
 
+	<ul>
+		<li><a id="refresh" href="#">Refresh</a></li>
+		<li><a id="row" href="#">New row</a></li>
+	</ul>
+
 	<main>
-
-		<section data-level-row class="row">
-
-			<article data-level-column class="column">
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<img src="http://placehold.it/530x400" width="530" height="400">
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-				<a class="btn" href="#">Button</a>
-			</article>
-
-			<article data-level-column class="column">
-				<p>Donec sed odio dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</p>
-					<img src="http://placehold.it/530x400" width="530" height="400">
-					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec ullamcorper nulla non metus auctor fringilla.</p>
-					<a class="btn" href="#">Button</a>
-			</article>
-
-			<article data-level-column class="column">
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. </p>
-				<img src="http://placehold.it/530x400" width="530" height="400">
-				<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-				<a class="btn" href="#">Button</a>
-			</article >
-
-		</section>
-		<p><a id="refresh" href="#">Refresh</a></p>
+		{% include "./partials/row.html" %}
 	</main>
 
 	<script src="/js/index.js"></script>
