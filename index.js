@@ -63,7 +63,6 @@ var leveldiv = {
 				if (options.debug && a.length ) console.log('row '+(i+1)+' highest column is',l );
 
 				for (c = 0; c < cols.length; ++c) {
-					console.log('ja');
 					if ( options.responsive && document.body.clientWidth > options.responsive){
 						cols[c].style.height = l+'px';
 						cols[c].dataset.levelColumn = 'done';
