@@ -47,7 +47,7 @@ var leveldiv = {
 
 		for (i = 0; i < rows.length; ++i) {
 
-			if ( rows[i].dataset.levelRow != 'done' || reset ){ // support for lazyloading
+			if ( rows[i].getAttribute('data-level-row') != 'done' || reset ){ // support for lazyloading
 				a = [];
 				cols = rows[i].querySelectorAll(options.column);
 
@@ -65,12 +65,12 @@ var leveldiv = {
 				for (c = 0; c < cols.length; ++c) {
 					if ( options.responsive && document.body.clientWidth > options.responsive){
 						cols[c].style.height = l+'px';
-						cols[c].dataset.levelColumn = 'done';
+						cols[c].setAttribute('data-level-column','done');
 					}else{
 						cols[c].style.height = '';
 					}
 				}
-				rows[i].dataset.levelRow = 'done';
+				rows[i].setAttribute('data-level-row','done');
 			}
 		}
 	},
